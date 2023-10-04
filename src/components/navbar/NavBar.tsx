@@ -9,12 +9,11 @@ const NavBar = () => {
 
     return (
         <div>
-            <span>navba</span>
             <div>
                 {
                     links.map((e) => (
                         <Link key={e.id} href={e.path}>
-                            {e.title}
+                            <span> {e.title} </span>
                         </Link>
                     ))
                 }

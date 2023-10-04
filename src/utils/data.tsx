@@ -133,11 +133,6 @@ export const sofSkill = [
 
 export const links = [
     {
-        id: 1,
-        title: 'Hero',
-        path: '/Hero'
-    },
-    {
         id: 2,
         title: 'About',
         path: '/About'
