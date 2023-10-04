@@ -135,26 +135,26 @@ export const links = [
     {
         id: 2,
         title: 'About',
-        path: '/About'
+        path: '/about'
     },
     {
         id: 3,
         title: 'Skills',
-        path: '/Skills'
+        path: '/skills'
     },
     {
         id: 4,
         title: 'Portfolio',
-        path: '/Portfolio'
+        path: '/portfolio'
     },
     {
         id: 5,
         title: 'Experience',
-        path: '/Experience'
+        path: '/experience'
     },
     {
         id: 6,
         title: 'Contact',
-        path: '/Contact'
+        path: '/contact'
     },
 ]

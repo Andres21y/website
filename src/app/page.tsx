@@ -19,8 +19,10 @@ export default function Home() {
   }, [])
 
   return (
-    <main className={styles.main} >
-      <span>home</span>
-    </main>
+    <section className={styles.main} >
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+    </section>
   )
 }
