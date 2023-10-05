@@ -29,7 +29,6 @@ a {
 }
 
 .container {
-  background-color: red;
   min-height: 100vh;
   width: 100vw;
   margin: 0 auto;
