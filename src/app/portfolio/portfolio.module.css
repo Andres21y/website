@@ -1,0 +1,50 @@
+.container {
+    max-width: 1700px;
+    padding: 2rem 0;
+}
+
+.content {
+    max-width: 1700px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--third-bg-color);
+}
+
+.projectsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.card {
+    min-height: 400px;
+    background: var(--alter-bg-color);
+    padding: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .projectsContainer {
+        padding: 4rem;
+    }
+
+    .projectsContainer .card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .projectsContainer .card:nth-child(2n) {
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: right;
+        background: var(--alter-bg-color);
+    }
+}
