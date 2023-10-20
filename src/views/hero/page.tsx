@@ -10,13 +10,15 @@ function Hero() {
 
         <div className={styles.content}>
           <div className={styles.content__main}>
-            {/* <span className={styles.intro} >Me llamo</span> */}
             <div className={styles.container__name} >
-              <span className={styles.name} >{" "}Andres Cordoba</span>
+              <span className={styles.name} >Andres Cordoba</span>
               <span className={styles.carrer}>Full-Stack Developer</span>
             </div>
             <p className={styles.summary}> I love the opportunity to innovate and create something unique that has a positive impact on people's lives.</p>
-            <span>..No es solo un trabajo es una vida..</span>
+            <span>..No es solo un trabajo es una vida..
+
+            `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`
+            </span>
           </div>
 
           <div><Hire /></div>

@@ -9,7 +9,7 @@ function Contact() {
     <section className={styles.contact} >
       <div className="container">
 
-        <Header name={'Let’s connect!'} />
+        <Header name={"Let's connect!"} />
         <div className={styles.content}>
 
           <Image
@@ -27,7 +27,7 @@ function Contact() {
               you can do import PropTypes from 'prop-types'
               through my networks or send a E-mail
             </p>
-            <span>let´s talk</span>
+            <span>let's talk</span>
             <span className={styles.callTo}>
               <Link href={'#'}>
                 call to action

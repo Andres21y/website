@@ -20,7 +20,7 @@ export default function Home() {
       links: links,
       experience: experience
     })
-  }, [])
+  }, [state, setState])
 
   return (
     <div className="main">

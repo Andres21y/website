@@ -5,6 +5,5 @@ export { default as Media } from './media/media';
 export { default as Card } from './card/Card';
 export { default as Soft } from './softSkill/SoftSkills';
 export { default as Tech } from './techSkill/TechSkills';
-export { default as HeartBeat } from './heart/Heart';
 export { default as Header } from './header/Header';
 export { default as VideoPlayer } from './vid/Video';
