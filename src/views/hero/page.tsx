@@ -14,10 +14,10 @@ function Hero() {
               <span className={styles.name} >Andres Cordoba</span>
               <span className={styles.carrer}>Full-Stack Developer</span>
             </div>
-            <p className={styles.summary}> I love the opportunity to innovate and create something unique that has a positive impact on people's lives.</p>
+            <p className={styles.summary}> I love the opportunity to innovate and create something unique that has a positive impact on people&#39;s lives.</p>
             <span>..No es solo un trabajo es una vida..
 
-            `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`
+            &apos;, `&lsquo;`, `&#39;`, `&rsquo;`
             </span>
           </div>
 
@@ -26,11 +26,11 @@ function Hero() {
 
         <div className={styles.img}>
           <Image
-            src='/svg/main.svg'
+            src="/svg/main.svg"
             className={styles.image}
             width={100}
             height={100}
-            alt='animation'
+            alt="animation"
           />
 
         </div>

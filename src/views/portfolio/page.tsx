@@ -21,10 +21,10 @@ export default function Portfolio() {
   const { state: { projects } } = useAppContext();
   const latest = projects.slice(0, 2);
   return (
-    <section id='projects' className={styles.gallery} >
+    <section id="projects" className={styles.gallery} >
       <div className={styles.container}>
 
-        <Header name={'gallery'} />
+        <Header name={"gallery"} />
 
         <div className={styles.projects_container}>
 
@@ -34,10 +34,10 @@ export default function Portfolio() {
                 <MdOutlineWeb />
 
                 <span>Web</span>
-                <span>multi-divice</span>
+                <span>multi&#45;divice</span>
               </div>
-              <Link href={'#'} className={styles.btn_more}>
-                <span>Let's go</span>
+              <Link href={"#"} className={styles.btn_more}>
+              <span>Let&#39;s go</span>
                 <MdArrowRightAlt />
               </Link>
             </div>
@@ -49,10 +49,10 @@ export default function Portfolio() {
                 <MdOutlineWeb />
 
                 <span>Web</span>
-                <span>multi-divice</span>
+                <span>multi&#45;divice</span>
               </div>
-              <Link href={'#'} className={styles.btn_more}>
-                <span>Let's go</span>
+              <Link href={"#"} className={styles.btn_more}>
+              <span>Let&#39;s go</span>
                 <MdArrowRightAlt />
               </Link>
             </div>
@@ -64,10 +64,10 @@ export default function Portfolio() {
                 <MdOutlineWeb />
 
                 <span>Web</span>
-                <span>multi-divice</span>
+                <span>multi&#45;divice</span>
               </div>
-              <Link href={'#'} className={styles.btn_more}>
-                <span>Let's go</span>
+              <Link href={"#"} className={styles.btn_more}>
+                <span>Let&#39;s go</span>
                 <MdArrowRightAlt />
               </Link>
             </div>
@@ -91,7 +91,7 @@ export default function Portfolio() {
                     className={styles.image}
                   ></Image>
 
-                  <Link href={'#'} className={styles.btn_detail}>
+                  <Link href={"#"} className={styles.btn_detail}>
                     <span>Click me</span>
                     <AiOutlineCaretRight />
                   </Link>
