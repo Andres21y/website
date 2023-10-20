@@ -1,21 +1,18 @@
-.container {
-    /* background-color: rgba(250, 235, 215, 0.323); */
+.contact{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    max-width: 1600px;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 7rem;
 }
-
-.title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--third-bg-color);
-}
-
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .image {
@@ -24,17 +21,19 @@
     max-height: 500px;
     object-fit: contain;
     opacity: .9;
+    animation: bounce 2s infinite ease alternate;
 }
 
 .info {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2.5rem;
 
 }
 
 .info p {
     font-size: 1.2rem;
+    line-height: 2.7rem;
 }
 
 .callTo {
@@ -43,6 +42,7 @@
     align-items: center;
     width: 100%;
     padding: 10px 20px;
+    font-size: 1.2rem;
     font-weight: bold;
     border-radius: 5px;
     background: var(--alter-bg-color);
@@ -50,11 +50,15 @@
     color: var(--third-bg-color);
 }
 
-
+@keyframes bounce {
+    from {
+        transform: translateY(-14px);
+    }
+}
 
 @media only screen and (min-width: 480px) {
     .callTo {
-        max-width: 300px;
+        max-width: 200px;
         align-self: center;
     }
 }
@@ -63,9 +67,6 @@
     .content {
         flex-direction: row;
         gap: 1rem;
-      }
+    }
 }
-
-
-
 

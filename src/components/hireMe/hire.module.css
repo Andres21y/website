@@ -1,61 +1,91 @@
 .container {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.button1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  font-weight: bold;
+  box-shadow: 2px 1px 2px #ff2600;
+  transition: all 0.4s ease-out;
+  animation: latir 1s infinite
+}
+
+.button1:hover {
+  background: linear-gradient(to right, #6441ff, #ff2600);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
 }
 
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    border: 4px solid transparent;
-    font-weight: bold;
-    box-shadow: 2px 1px 2px #ff2600;
-    transition: all 0.4s ease-out;
-    animation: latir 1s infinite;
+  position: relative;
+  width: 200px;
+  min-width: 180px;
+  height: 40px;
+  display: flex;
+  background-color: var(--text-color);
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.button__icon,
+.button__text {
+  display: grid;
+  place-items: center;
+  border: 1.5px solid ;
+}
+
+.button__text {
+  color: var(--secondary-color);
+  font-weight: 600;
+  width: 75%;
+  background-color: rgba(255, 255, 255, 0.358);
+  border-color: var(--text-color);
 
 }
 
-.button:hover {
-    background: linear-gradient(to right, #6441ff, #ff2600);
-    -webkit-background-clip: text;
-    /* Para navegadores WebKit (Safari, Chrome) */
-    background-clip: text;
-    color: transparent;
-    cursor: pointer;
+.button__icon {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  padding: 0 1rem;
+  border-color: var(--secondary-color);
 }
 
-.buttonOff {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    background: var(--alter-bg-color);
-    transition: all 0.4s ease-out;
+.button .svg {
+  width: 20px;
 }
 
-.buttonOff:hover {
-    background-position: right;
+.button .button__icon:hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
 }
+
+
 
 @keyframes latir {
-    0% {
-        transform: scale(1);
+  0% {
+    transform: scale(1);
 
-    }
+  }
 
-    50% {
-        transform: scale(1.1);
-    }
+  50% {
+    transform: scale(1.1);
+  }
 
-    100% {
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
 }

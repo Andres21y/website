@@ -1,25 +1,29 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from './hire.module.css'
-import { FaCloudDownloadAlt } from 'react-icons/fa'
+import { LuDownloadCloud } from 'react-icons/lu'
 
 export default function HireMe() {
     return (
         <div className={styles.container}>
             <Link href={'#contact'}>
-                <span className={styles.button}>
+                <span className={styles.button1}>
                     Hire Me
                 </span>
             </Link>
-
-            <Link href={'#contact'}>
-                <span className={styles.buttonOff}>
-                    {<FaCloudDownloadAlt size={21} />}
+            <div className={styles.button}>
+                <span className={styles.button__text}>
                     download cv
                 </span>
-            </Link>
 
-        </div>
+                <Link href={'#contact'} className={styles.button__icon} >
+                    <span >
+                        <LuDownloadCloud size={23} />
+                    </span>
+                </Link>
+            </div>
+
+        </div >
 
     )
 }

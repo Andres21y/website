@@ -1,0 +1,86 @@
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    text-transform: capitalize;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-color);
+    animation: mirror 1s infinite;
+    margin-bottom: 1rem;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5rem 1rem;
+    background: var(--alter-color);
+    border-radius: 5px;
+    gap: 3rem;
+}
+
+.tech {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    width: 100px;
+    height: 110px;
+    background: #ffffff;
+    box-shadow: 0 0 12px lightgreen;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.tech::before {
+    /* 
+    display: grid;
+    place-items: center;
+    content: 'xaaaa';
+    position:'absolute';
+    filter: blur(12px);
+    width: 100px;
+    height: 110px;
+
+    z-index: 1;
+    */
+}
+
+.techLogo {
+    font-size: 2rem;
+    padding: .5rem;
+}
+
+.techName {
+    width: 100%;
+    font-size: 1rem;
+    display: none;
+}
+
+.tech:hover {
+    background: linear-gradient(120deg, transparent 30%, #cceeffca 38%, #cceeffca 40%, transparent 48%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: mirror 1s infinite;
+}
+
+.tech:hover .techLogo {
+    display: none;
+}
+
+.tech:hover .techName {
+    display: grid;
+    place-items: center;
+}
+
+@keyframes mirror {
+    100% {
+        background-position: -100% 0;
+    }
+}

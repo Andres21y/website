@@ -1,28 +1,36 @@
 'use client'
 import React from 'react';
-import Image from 'next/image'
-import styles from './page.module.css'
 import { useAppContext } from '@/utils/context';
-import { links, projects, sofSkill, tecnologies } from '@/utils/data';
+import { experience, links, projects, sofSkill, tecnologies } from '@/utils/data';
+
+
+import { About, Contact, Hero, Portfolio } from '@/views';
 
 
 export default function Home() {
+
   const { state, setState } = useAppContext();
+
   React.useEffect(() => {
     setState({
       ...state,
       tech: tecnologies,
       skills: sofSkill,
       projects: projects,
-      links: links
+      links: links,
+      experience: experience
     })
   }, [])
 
   return (
-    <section className={styles.main} >
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-    </section>
+    <div className="main">
+
+      <Hero />
+      <About />
+      <Portfolio />
+      {/* <Experience /> */}
+      <Contact />
+
+    </div>
   )
 }

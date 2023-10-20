@@ -9,7 +9,7 @@ export interface Project {
     deploy: string;
     code: string;
     linkedin: string;
-    tech: string[];
+    tech: any[];
     category: string
 }
 
@@ -31,9 +31,10 @@ export interface Link {
 export interface Experience {
     title: string;
     location: string;
-    summary: string;
+    company: string;
     date: string;
     icon: JSX.Element;
+    summary:string
 }
 
 export interface StateProps {
