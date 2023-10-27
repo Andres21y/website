@@ -18,11 +18,11 @@ const Ui = () => {
       <div className="category_content">
         {
           uiElements.map(e => (
-            <div className={styles.card_content}>
+            <div className={styles.card_content} key={e.id}>
               <Card
                 id={e.id}
                 name={e.name}
-                code={e.code}
+                code={e.code} key={e.id}
                 tech={e.tech}
                 image={e.image}
                 deploy={e.deploy}

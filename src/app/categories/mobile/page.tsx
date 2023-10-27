@@ -18,7 +18,7 @@ const Mobile = () => {
       <div className={styles.category_content}>
         {
           mobElements.map(e => (
-            <div className={styles.card_content}>
+            <div className={styles.card_content} key={e.id}>
               <Card
                 id={e.id}
                 name={e.name}
