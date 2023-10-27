@@ -1,5 +1,5 @@
 .hero {
-    margin: 3rem 0;
+    margin: 3rem 1rem;
 }
 
 .container {
@@ -34,11 +34,6 @@
     object-fit: contain;
 }
 
-.intro {
-    font-size: 17px;
-    font-weight: 400;
-}
-
 .container__name {
     display: flex;
     flex-direction: column;
@@ -53,9 +48,8 @@
 
 .carrer {
     color: var(--secondary-color);
-    font-weight: 900;
     color: transparent;
-    -webkit-text-stroke: 2px var(--text-color-second);
+    -webkit-text-stroke: 2px var(--title-color);
 } 
 
 .summary {

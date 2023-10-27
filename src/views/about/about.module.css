@@ -1,19 +1,26 @@
-.about{
+.about {
     display: flex;
     justify-content: center;
+    margin: 0 1rem;
 }
-.container{
-    max-width: 1600px;
+
+.container,
+.imgContainer,
+.figure,
+.infoContainer {
     display: flex;
     flex-direction: column;
+}
+
+
+.container {
+    max-width: 1600px;
     gap: 7rem;
+    width: 100%;
 }
 
 .imgContainer {
-    display: flex;
-    flex-direction: column;
     gap: 1rem;
-  
 }
 
 .infoContainer p {
@@ -29,12 +36,11 @@
 }
 
 .image {
-    border-radius:5px;
+    border-radius: 5px;
     overflow: hidden;
 }
-.figure{
-    display: flex;
-    flex-direction: column;
+
+.figure {
     gap: .1rem;
     padding: 1rem;
 }
@@ -44,9 +50,7 @@
 }
 
 .infoContainer {
-    display: flex;
     gap: 2rem;
-    flex-direction: column;
     padding: 1rem;
 }
 
@@ -55,7 +59,7 @@
     .main {
         display: flex;
         flex-direction: row;
-        padding:0 2rem;
+        padding: 0 2rem;
     }
 
     .imgContainer {
@@ -73,9 +77,8 @@
         border-radius: 0;
         overflow: hidden;
     }
-    .figure{
-        display: flex;
-        flex-direction: column;
+
+    .figure {
         gap: .2rem;
         padding: 1rem;
     }

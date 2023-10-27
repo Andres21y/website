@@ -2,12 +2,13 @@ import { Header, Media, Soft, Tech } from '@/components'
 import React from 'react'
 import styles from './about.module.css'
 import Image from 'next/image'
-import Link from 'next/link'
-import personal from '../../../public/images/admin.jpg'
+import personal from '../../../public/images/club.jpg'
 import HireMe from '@/components/hireMe/HireMe'
+
 function About() {
+
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id='about'>
       <div className={styles.container}>
 
         <Header name={'about'} />
@@ -18,7 +19,7 @@ function About() {
                 layout="responsive"
                 width={600}
                 height={400}
-                alt="xx" />
+                alt="moi" />
               <figcaption className={styles.figure}>
                 <span className={styles.name}>Andres Cordoba</span>
                 <br />
@@ -33,27 +34,17 @@ function About() {
 
           <div className={styles.infoContainer}>
             <p>
-              Soy un apasionado Full Stack Developer con un enfoque destacado
-              en el lado del cliente. Mi viaje en el mundo de la programación
-              comenzó como una búsqueda de la creatividad a través de la
-              tecnología. Con habilidades sólidas en HTML, CSS y JavaScript,
-              me especializo en la creación de experiencias de usuario
-              excepcionales y altamente interactivas.
+              I am a zealous Full Stack Developer with a prominent focus on the client side. My journey into the realm of programming commenced as a pursuit of creativity through technology. Endowed with formidable skills in HTML, CSS, and JavaScript, I specialize in fashioning exceptional and highly interactive user experiences.
             </p>
             <p>
-              Mi enfoque se centra en
-              traducir las ideas y necesidades del cliente en soluciones
-              digitales elegantes y funcionales. Con un ojo para el diseño y
-              un compromiso inquebrantable con la optimización del rendimiento,
-              mi objetivo es proporcionar a los usuarios finales experiencias
-              web fluidas y memorables.
+              My emphasis revolves around the translation of client ideas and requirements into elegant and functional digital solutions. With a discerning eye for design and an unwavering commitment to performance optimization, my aim is to provide end-users with seamless and unforgettable web experiences.
             </p>
             <HireMe />
           </div>
         </div>
 
         <Tech />
-        <Soft />
+        {/* <Soft /> */}
 
       </div>
     </section>

@@ -1,29 +1,27 @@
 :root {
-  /* principal colors */
-  --primary-color: #101a32;
+
+  --primary-color:#27374D;
   --secondary-color: #1AACAC;
-  --alter-color: #027a7a;
+  --alter-color: #015252;
   --text-color: #ffffff;
   --text-color-second: #ffffff71;
   --second-color: #00aaff;
+  --dark-color: rgba(0, 0, 0, 0.417);
   --gradient-bg-color: linear-gradient(90deg, #1AACAC 45%, #005187 100%);
 
-  /* title colors */
   --title-color: #F86F03;
 
-  /* focuse colors */
-  --focuse-color: #060400;
-
+  --focuse-color: #F86F03;
   --link-color: #0074D9;
-  /* Color de los enlaces */
 
-  /* Colores para botones */
   --button-primary: var(--primary-color);
   --button-secondary: var(--secondary-color);
   --button-text: #fff;
   --button-hover: #ddd;
 
   --color: rgba(25, 78, 113, 0.105);
+  --gradient-focuse: linear-gradient(-90deg, rgba(14, 255, 0, 1) var(--focuse-color) 30%, rgb(139, 251, 255) 60%);
+  --border-gradient-focuse: linear-gradient(45deg, 22%, #238BD0 28%, #9C03C5 50%)1;
   --mirror: linear-gradient(120deg, #176B87 30%, #cceeffca 38%, #cceeffca 40%, #176B87 48%);
 }
 
@@ -31,6 +29,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-size: 16px;
 }
 
 
@@ -40,18 +39,17 @@ body {
   font-family: var(--font-inter);
   background: var(--primary-color);
   color: var(--text-color);
-  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
-    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
-  background-size: 55px 55px;
+  min-width: 240px;
 }
 
 
 section {
   max-width: 100%;
-  padding: 0 1rem;
   display: flex;
   justify-content: center;
-}
+  padding: 3rem 0;
+  position: relative;
+} 
 
 a {
   text-decoration: none;
@@ -67,15 +65,13 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* gap: 1rem; */
   text-align: center;
-  /* letter-spacing: .5rem; */
 }
 
 .title_container span:first-child {
   text-transform: capitalize;
-  font-size: 3rem;
-  color: var(--text-color) !important;
+  font-size: 2rem;
+  color: var(--focuse-color) !important;
   z-index: 1;
 }
 
@@ -85,14 +81,15 @@ a {
 
 .title_container::before {
   content: 'section';
-  position: relative;
-  top: 2rem;
-  left: 2rem;
-  font-size: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 4rem;
+  font-size: 2rem;
   color: transparent;
   opacity: .5;
   -webkit-text-stroke: 1px var(--secondary-color);
   text-transform: capitalize;
+  text-align: center;
 }
 
 .title_container span:first-child::after {
@@ -101,10 +98,28 @@ a {
   position: relative;
   margin: 0 auto;
   width: 200px;
-  padding: 1px;
-  border-radius: 50%;
-  background-color: var(--text-color-second);
+  padding: 3px 0;
+  border-radius: 5px;
   transition: all 1s;
+  background: #54CE00;
+  background: -moz-linear-gradient(45deg, #54CE00 0%, #238BD0 28%, #9C03C5 100%);
+  background: -webkit-linear-gradient(45deg, #54CE00 0%, #238BD0 28%, #9C03C5 100%);
+  background: linear-gradient(45deg, #54CE00 50%, #238BD0 50%);
+}
+
+.sub_title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  background: linear-gradient(-40deg, rgba(14, 255, 0, 1) 42%, rgba(0, 160, 246, 1) 51%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 section:hover .title_container span:first-child::after {
@@ -112,8 +127,9 @@ section:hover .title_container span:first-child::after {
   content: '';
   position: relative;
   width: 100%;
-  padding: 1px;
   background-color: var(--secondary-color);
+  box-shadow: 2px 2px 12px linear-gradient(to right, #FFC0CB, #FFD700, #FFA07A);
+  ;
 }
 
 .about:hover .title_container .text_two,
@@ -136,35 +152,14 @@ section:hover .title_container span:first-child::after {
   }
 }
 
-/* 
-@media only screen and (min-width: 480px) {
-    .container {
-        background-color: rgba(255, 0, 0, 0.598);
-    }
-
-
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  * {
+    font-size: 18px;
+  }
 }
 
-@media only screen and (min-width: 768px) {
-    .container {
-        background-color: rgb(0, 255, 55);
-    }
-
+@media screen and (min-width: 1200px) {
+  * {
+    font-size: 20px;
+  }
 }
-
-@media only screen and (min-width: 992px) {
-    .container {
-        background-color: rgba(255, 251, 0, 0.58);
-    }
-   
-  
-}
-
-@media only screen and (min-width: 1200px) {
-    .container {
-        background-color: rgb(63, 162, 255);
-    }
-
-}
-
-*/

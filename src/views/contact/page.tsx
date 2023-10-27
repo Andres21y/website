@@ -5,9 +5,10 @@ import Link from 'next/link'
 import { Header, Media } from '@/components'
 
 function Contact() {
+  const emailAddress = 'andres17vh@gmail.com'
   return (
-    <section className={styles.contact} >
-      <div className="container">
+    <section className={styles.contact} id='contact'>
+      <div className={styles.container}>
 
         <Header name={"Let\'s connect!"} />
         <div className={styles.content}>
@@ -28,17 +29,21 @@ function Contact() {
               through my networks or send a E&#45;mail
             </p>
             <span>let&#39;s talk</span>
-            <span className={styles.callTo}>
-              <Link href={'#'}>
-                call to action
-              </Link>
-            </span>
+            <div className={styles.btn}>
+              <span className={styles.btn_content}>
+                <Link href={`mailto:${emailAddress}`} className={styles.btn_buttom}>
+                  connect
+                </Link>
+              </span>
+            </div>
 
           </div>
-
         </div>
 
-        <Media />
+        <Media /> 
+        <p style={{ padding: '0 1rem', lineHeight: '2rem' }}>
+          Thank you for visiting my programming website. Should you require my services or wish to discuss a project, feel free to get in touch with me.
+        </p>
 
       </div>
     </section >

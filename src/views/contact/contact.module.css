@@ -1,13 +1,15 @@
-.contact{
+.contact {
     display: flex;
     justify-content: center;
 }
-.container{
+
+.container {
     max-width: 1600px;
     display: flex;
     flex-direction: column;
-    gap: 7rem;
+    gap: 1rem;
 }
+
 .content {
     display: flex;
     flex-direction: column;
@@ -28,26 +30,74 @@
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    padding: 0 1rem;
 
 }
 
 .info p {
-    font-size: 1.2rem;
-    line-height: 2.7rem;
+    font-size:calc(1rem + 1%);
+    line-height: 2rem;
 }
 
-.callTo {
+.btn {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.btn_content {
+    position: relative;
+    display: block;
+    padding: 1.7rem 5.7rem;
+}
+
+.btn_content a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.172);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.26);
+    border-top: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
-    background: var(--alter-bg-color);
-    transition: all 0.4s ease-out;
-    color: var(--third-bg-color);
+    color: #fff;
+    z-index: 1;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: .5s;
+    backdrop-filter: blur(12px);
+}
+
+.btn_content:hover a {
+    letter-spacing: 3px;
+}
+
+.btn_content::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background-color: lawngreen;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.btn_content:hover::before {
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition: .5s;
 }
 
 @keyframes bounce {
@@ -56,12 +106,7 @@
     }
 }
 
-@media only screen and (min-width: 480px) {
-    .callTo {
-        max-width: 200px;
-        align-self: center;
-    }
-}
+@media only screen and (min-width: 480px) {}
 
 @media only screen and (min-width: 768px) {
     .content {
@@ -69,4 +114,3 @@
         gap: 1rem;
     }
 }
-

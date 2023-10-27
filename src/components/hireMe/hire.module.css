@@ -30,24 +30,25 @@
 
 .button {
   position: relative;
-  width: 200px;
+  width: 220px;
   min-width: 180px;
-  height: 40px;
+  height: 49px;
   display: flex;
   background-color: var(--text-color);
   overflow: hidden;
   border-radius: 5px;
+  transition:all 1s ease-in cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .button__icon,
 .button__text {
   display: grid;
   place-items: center;
-  border: 1.5px solid ;
+  border: 1.5px solid;
 }
 
 .button__text {
-  color: var(--secondary-color);
+  color: var(--title-color);
   font-weight: 600;
   width: 75%;
   background-color: rgba(255, 255, 255, 0.358);
@@ -57,9 +58,9 @@
 
 .button__icon {
   cursor: pointer;
-  background-color: var(--secondary-color);
+  background-color: var(--title-color);
   padding: 0 1rem;
-  border-color: var(--secondary-color);
+  border-color: var(--title-color);
 }
 
 .button .svg {

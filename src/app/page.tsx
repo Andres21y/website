@@ -5,6 +5,7 @@ import { experience, links, projects, sofSkill, tecnologies } from '@/utils/data
 
 
 import { About, Contact, Hero, Portfolio } from '@/views';
+import { Navbar } from '@/components';
 
 
 export default function Home() {
@@ -12,19 +13,24 @@ export default function Home() {
   const { state, setState } = useAppContext();
 
   React.useEffect(() => {
-    setState({
-      ...state,
-      tech: tecnologies,
-      skills: sofSkill,
-      projects: projects,
-      links: links,
-      experience: experience
-    })
-  }, [state, setState])
+    async function charge() {
+      await setState({
+        ...state,
+        tech: tecnologies,
+        skills: sofSkill,
+        projects: projects,
+        links: links,
+        experience: experience
+      })
+    }
+    
+    charge()
+
+  }, [])
 
   return (
     <div className="main">
-
+      <Navbar />
       <Hero />
       <About />
       <Portfolio />

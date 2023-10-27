@@ -9,6 +9,7 @@ import React from 'react';
 import { MdDeveloperMode } from 'react-icons/md';
 export const icon = React.createElement;
 import { v4 as uuidv4 } from 'uuid';
+import { BiLogoFirebase } from 'react-icons/bi';
 
 const icons = {
     js: <SiJavascript size={37} color={'rgb(240, 219, 79)'} />,
@@ -24,6 +25,7 @@ const icons = {
     css: <FaCss3Alt size={37} color={'#2965f1'} />,
     sass: <FaSass size={37} color={'#f14a29'} />,
     tw: <SiTailwindcss size={37} color={'rgb(56, 189, 248)'} />,
+    fbase: <BiLogoFirebase size={37} color={'rgb(240, 219, 79)'} />,
 }
 
 export const tecnologies = [
@@ -85,26 +87,24 @@ export const projects = [
     {
         category: 'web',
         id: uuidv4(),
-        image: '/images/admin.jpg',
-        name: "Catch one",
-        summary: "Para poner en práctica los conocimientos adquiridos durante el estudio de TypeScript, decidí crear esta aplicación (pokedex) con React-TypeScript para demostrar esta nueva habilidad técnica..",
-        deploy: "https://poke-api-chatch.vercel.app/",
-        code: "https://github.com/Andres21y/Poke_api_chatch",
-        linkedin: "#",
+        image: '/images/portfolio.png',
+        name: "Latest Portfolio",
+        summary: "Crafted and developed utilizing React and styled with SCSS, this digital work of art is a testament to my unwavering commitment to seamlessly blend creativity with technical prowess.",
+        deploy: "https://portafolio-web-eta.vercel.app/",
+        code: "https://github.com/Andres21y/portafolio_web",
+        linkedin: "https://www.linkedin.com/posts/andres-cordoba-8714b5238_empleo-activity-7066434933103194112-CFcl?utm_source=share&utm_medium=member_desktop",
         tech: [
-            icons.ts,
             icons.nJs,
             icons.react,
-            'fireBase',
-            icons.css,
+            icons.sass,
         ]
     },
     {
         category: 'web',
         id: uuidv4(),
-        image: '/images/admin.jpg',
+        image: '/images/club.jpg',
         name: "Club Wolves - Voleyball",
-        summary: "Este sitio web está diseñado para un club de voleibol. Para facilitar la gestión de los datos del club, se creó un sitio web donde los usuarios pueden registrarse, pudiendo tener diferentes roles, ya sea un usuario registrado sin registrarse a un grupo de voleibol, un jugador registrado o un administrador. También incluye una tienda donde poder acceder y ver los diferentes productos relacionados con el club.",
+        summary: "The ultimate application for volleyball enthusiasts and club members is here. Designed with fervor and utilizing cutting-edge technologies such as React, Redux, Firebase, and Node.js, this app offers players, coaches, and followers a more engaged and exhilarating club experience than ever before.",
         deploy: "https://finalproject-one.vercel.app/",
         code: "https://github.com/medinahj21/Final_Project/tree/dev",
         linkedin: "#",
@@ -119,25 +119,40 @@ export const projects = [
     {
         category: 'web',
         id: uuidv4(),
-        image: '/images/one.png',
-        name: "Botom custom Whatsapp Vtex",
-        summary: "Como lo indica el título, esta aplicación es un botón personalizado de WhatsApp para ser utilizado principalmente en entornos de desarrollo Vtex. La idea de este botón surge como una mejora en la experiencia del usuario, ya que es posible obtener una forma más de ponerse en contacto.",
-        deploy: "",
-        code: "https://github.com/Andres21y/vtex-whatsapp-button",
+        image: '/images/pokeApi.png',
+        name: "Catch One",
+        summary: "This is an exhilarating application designed for all Pokémon enthusiasts who yearn to explore the world of these adorable pocket monsters. Developed with cutting-edge technologies such as React for the user interface, Firebase for cloud-based data storage, and Node.js for the backend, this application immerses you in the vast collection of Pokémon in an intuitive and thrilling way.",
+        deploy: "https://poke-api-chatch.vercel.app/",
+        code: "https://github.com/Andres21y/Poke_api_chatch",
         linkedin: "#",
         tech: [
             icons.ts,
             icons.nJs,
-            icons.vtex,
+            icons.react,
+            icons.fbase,
             icons.css,
         ]
     },
     {
         category: 'ui',
         id: uuidv4(),
+        image: '/images/whatsapp.jpg',
+        name: "Botom Custom Whatsapp Vtex",
+        summary: "An exhilarating WhatsApp Button component developed in TypeScript! This innovative feature is designed to take your online store's customer experience to the next level by seamlessly integrating the popular messaging platform, WhatsApp.",
+        deploy: "",
+        code: "https://github.com/Andres21y/vtex-whatsapp-button",
+        linkedin: "#",
+        tech: [
+            icons.ts,
+            icons.nJs
+        ]
+    },
+    {
+        category: 'ui',
+        id: uuidv4(),
         image: '/images/clock.png',
-        name: "Clock analogo",
-        summary: "Este sitio web está diseñado para un club de voleibol. Para facilitar la gestión de los datos del club, se creó un sitio web donde los usuarios pueden registrarse, pudiendo tener diferentes roles, ya sea un usuario registrado sin registrarse a un grupo de voleibol, un jugador registrado o un administrador. También incluye una tienda donde poder acceder y ver los diferentes productos relacionados con el club.",
+        name: "Clock Analogo",
+        summary: "This project entails an interactive analog clock meticulously crafted and developed employing standard web technologies such as HTML, CSS, and JavaScript. It epitomizes a manifestation of my prowess as a web developer and interface designer.",
         deploy: "https://andres21y.github.io/analog_clock/",
         code: "https://github.com/medinahj21/Final_Project/tree/dev",
         linkedin: "#",
@@ -189,22 +204,22 @@ export const links = [
     {
         id: 2,
         title: 'About',
-        path: '/about'
+        path: '#about'
     },
     {
         id: 4,
         title: 'Portfolio',
-        path: '/portfolio'
+        path: '#portfolio'
     },
-    {
-        id: 5,
-        title: 'Experience',
-        path: '/experience'
-    },
+    // {
+    //     id: 5,
+    //     title: 'Experience',
+    //     path: '#experience'
+    // },
     {
         id: 6,
         title: 'Contact',
-        path: '/contact'
+        path: '#contact'
     },
 ]
 
@@ -241,3 +256,9 @@ export const experience = [{
     summary: ''
 },
 ]
+
+export const urlPath ={
+        linkedin:"https://www.linkedin.com/in/andres-cordoba-8714b5238/",
+        github:"https://github.com/Andres21y",
+        mail:"mailto:andres17vh@gmail.com"
+    }

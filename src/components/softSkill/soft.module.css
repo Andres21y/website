@@ -14,9 +14,9 @@
     justify-content: center;
     width: 100%;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1rem;
+   letter-spacing: 2px;;
     color: transparent;
-    letter-spacing: 1rem;
     text-transform: capitalize;
     -webkit-text-stroke: 1px var(--text-color);
     margin-bottom: 1rem;

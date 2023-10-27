@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from './footer.module.css'
-
+import { urlPath } from '@/utils/data'
 const Footer = () => {
     return (
         <div className={styles.container}>
@@ -12,10 +12,10 @@ const Footer = () => {
                         <span>Navigation</span>
                     </div>
                     <div className={styles.contents}>
-                        <Link href="about" >About</Link>
-                        <Link href="portfolio" className='navLink'>Projects</Link>
-                        <Link href="experience" className='navLink'>Experience</Link>
-                        <Link href="contact" className='navLink'>Contact</Link>
+                        <Link href="/#about" >About</Link>
+                        <Link href="/#portfolio" className='navLink'>Projects</Link>
+                        {/* <Link href="/#experience" className='navLink'>Experience</Link> */}
+                        <Link href="/#contact" className='navLink'>Contact</Link>
                     </div>
 
                 </div >
@@ -24,9 +24,9 @@ const Footer = () => {
                         <span>Networks</span>
                     </div>
                     <div className={styles.contents}>
-                        <Link href="https://www.linkedin.com/in/andres-cordoba-8714b5238/">Linkedin</Link>
-                        <Link href="mailto:andres17vh@gmail.com" target="_blank">Mail</Link>
-                        <Link href="https://github.com/Andres21y">github</Link>
+                        <Link href={urlPath.linkedin}>Linkedin</Link>
+                        <Link href={urlPath.mail} target="_blank">Mail</Link>
+                        <Link href={urlPath.github}>github</Link>
                     </div>
                 </div>
                 <div className={styles.linksections}>
@@ -37,7 +37,7 @@ const Footer = () => {
                 </div>
 
             </div >
-            <span className={styles.copyright} >Design and built by Andres Cordoba</span>
+            <span className={styles.copyright} >All rights reserved. Designed and developed by Andres Cordoba</span>
         </div>
     )
 }

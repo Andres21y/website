@@ -1,5 +1,5 @@
 
-import { Navbar, Footer } from '@/components'
+import { Footer } from '@/components'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
@@ -33,7 +33,6 @@ export default function RootLayout({
       <body className={`${inter.variable} ${poppins.variable}`}>
         <div className="container">
           <StateProvider>
-            <Navbar />
             {children}
             <Footer />
           </StateProvider>

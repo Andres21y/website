@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import styles from './hero.module.css'
 import { Hire } from '@/components'
+import { PiDotsThreeThin } from 'react-icons/pi'
 
 function Hero() {
   return (
@@ -15,10 +16,7 @@ function Hero() {
               <span className={styles.carrer}>Full-Stack Developer</span>
             </div>
             <p className={styles.summary}> I love the opportunity to innovate and create something unique that has a positive impact on people&#39;s lives.</p>
-            <span>..No es solo un trabajo es una vida..
-
-            &apos;, `&lsquo;`, `&#39;`, `&rsquo;`
-            </span>
+            <span style={{display:'flex', alignItems:'center'}}><PiDotsThreeThin  size={47} />It is not just a job, it is a passion. <PiDotsThreeThin size={47}/> </span>
           </div>
 
           <div><Hire /></div>

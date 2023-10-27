@@ -2,12 +2,13 @@
 import React, { useRef } from "react";
 import { FaTimes } from "react-icons/fa";
 import { BiMenu } from "react-icons/bi";
-import styles from "./nav.module.css"; // Asegúrate de que la ruta a tus estilos sea correcta.
 import { useAppContext } from "@/utils/context";
 import Link from "next/link";
 import Image from "next/image";
+import styles from "./nav.module.css"; 
 
 function Navbar() {
+
     const navRef = useRef<HTMLDivElement>(null);
     const { state } = useAppContext();
     const { links } = state;
@@ -31,7 +32,7 @@ function Navbar() {
                         alt="Logo"
                     />
                 </div>
-                <nav ref={navRef} className={styles.nav}> {/* Asigna la clase CSS para el estilo del nav */}
+                <nav ref={navRef} className={styles.nav}>
                     {
                         links.map((e) => (
                             <Link key={e.id} href={e.path} onClick={showNavbar} >
@@ -40,7 +41,7 @@ function Navbar() {
                         ))
                     }
                     <span
-                        className={`${styles.nav_btn} ${styles.nav_close_btn}`} // Asigna las clases CSS para los botones
+                        className={`${styles.nav_btn} ${styles.nav_close_btn}`}
                         onClick={showNavbar}
                     >
                         <FaTimes size={27} />
